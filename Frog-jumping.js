@@ -37,3 +37,34 @@ function solution(a) {
 }
 
 // or
+
+function solution(a) {
+  let steps = 0;
+  let visited = [];
+
+  let i = 0;
+  while (true) {
+    steps++;
+    
+    // Check for escape
+    if (i + a[i] > a.length - 1 || i + a[i] < 0) {
+      break;
+    }
+    // Check for revisited stone or no stones at all
+    else if (visited.indexOf(i) >= 0 || a.length == 0) {
+      steps = -1;
+      break;
+    }
+    // otherwise jump!
+    else {
+      // Keep track of the stones the frog
+      // has been to, so if it revists one, 
+      // we know it's stuck.
+      visited.push(i);
+      
+      // Then move to the new stone
+      i += a[i];
+    }
+  }
+  return steps;
+}
