@@ -35,3 +35,5 @@ function solution(a) {
 
   return a.length ? c : -1;
 }
+
+// or
