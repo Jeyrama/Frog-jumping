@@ -17,3 +17,6 @@ Example:
   array = [1, 2, 1, 5]; 
   jumps = 3  (1 -> 2 -> 5 -> <jump out>)
 */
+
+
+// Solutions
